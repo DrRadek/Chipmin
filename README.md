@@ -22,6 +22,7 @@ No story, no ending, no fancy graphics, just eternal suffering as expected from 
 
 ### Controls
 - WASD - movement
+- Spacebar - jump
 - Tab or M - enable/disable cursor
 - ESC - menu
 - Interactions - Mouse
