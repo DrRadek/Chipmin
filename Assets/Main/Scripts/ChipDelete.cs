@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ChipDelete : MonoBehaviour
@@ -16,6 +17,10 @@ public class ChipDelete : MonoBehaviour
             {
                 inventory.TryRemoveChip(chip.GetComponent<Chip>());
             }
+
+            if (chip.IsDestroyed())
+                continue;
+
             Destroy(chip.gameObject);
         }
     }

@@ -58,7 +58,7 @@ public class ChipCollector : MonoBehaviour
         if (PlayerStats.instance.ToolMode != PlayerStats.ChipToolMode.In || playerStats.Chips == playerStats.ChipInventorySize)
             return;
 
-        if (!other.attachedRigidbody || !other.attachedRigidbody.TryGetComponent(out Chip chip) || !chip.isReal)
+        if (!other.attachedRigidbody || !other.attachedRigidbody.TryGetComponent(out Chip chip) || !chip.isReal || chip.IsDestroyed())
             return;
 
         chips.AddLast(chip);

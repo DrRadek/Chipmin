@@ -8,6 +8,8 @@ public class TriggerCounter : MonoBehaviour
 
     int count = 0;
 
+    float timeSinceLastCollision = 0;
+
     public int Count { 
         get => count;
         set 
@@ -21,6 +23,12 @@ public class TriggerCounter : MonoBehaviour
     {
         Count++;
     }
+
+    private void OnTriggerStay(Collider _)
+    {
+        timeSinceLastCollision = 0;
+    }
+
     void OnTriggerExit()
     {
         Count--;
@@ -28,5 +36,15 @@ public class TriggerCounter : MonoBehaviour
     private void OnDisable()
     {
         Count = 0;
+    }
+
+    private void FixedUpdate()
+    {
+        if (timeSinceLastCollision > 0.04f)
+        {
+            Count = 0;
+        }
+
+        timeSinceLastCollision += Time.deltaTime;
     }
 }

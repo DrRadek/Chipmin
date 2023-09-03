@@ -66,6 +66,9 @@ public class VanInventory : MonoBehaviour
     {
         foreach (Chip chip in chips)
         {
+            if (chip.IsDestroyed())
+                continue;
+
             Destroy(chip.gameObject);
         }
 
@@ -86,6 +89,9 @@ public class VanInventory : MonoBehaviour
     {
         foreach (Chip chip in chips)
         {
+            if (chip.IsDestroyed())
+                continue;
+            
             chip.isReal = false;
         }
     }
@@ -110,15 +116,14 @@ public class VanInventory : MonoBehaviour
 
         parentRb.transform.SetPositionAndRotation(respawnPos, respawnRot);
 
+        TotalValue = 0;
         DeleteChips();
 
         doorsRb.velocity = Vector3.zero;
         doorsRb.angularVelocity = Vector3.zero;
-        //doorsRb.AddTorque(Vector3.forward * 100, ForceMode.VelocityChange);
 
         doorsRb.transform.SetPositionAndRotation(respawnDoorPos, respawnDoorRot);
 
-        //doorsRb.transform.eulerAngles = new Vector3(17, 0, 0);
     }
 
 }
