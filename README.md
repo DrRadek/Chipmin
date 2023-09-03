@@ -3,7 +3,7 @@
 ## About
 It's just a simple game where you produce, collect and sell microchips.
 
-No story, no ending, just eternal suffering.
+No story, no ending, no fancy graphics, just eternal suffering as expected from a game made in 3 days.
 
 ## How to play
 1. You will start with enough money to buy the most basic factory. You can own up to 6 factories.
