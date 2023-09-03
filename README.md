@@ -30,3 +30,5 @@ No story, no ending, no fancy graphics, just eternal suffering as expected from 
      - Off - Does nothing
      - In - Sucks microchips in
      - Out - The opposite of In
+## Game files
+https://lil-lynx.itch.io/chipmin
